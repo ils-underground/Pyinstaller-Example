@@ -8,6 +8,10 @@ Pyinstaller is a Python module that easily packages up a Python script along wit
 
 For a good introduction to Pyinstaller I recommend the [Inforworld article here](https://www.infoworld.com/article/3543792/how-to-use-pyinstaller-to-create-python-executables.html).
 
+### Pyinstaller Considerations
+
+Dist folders created by Pyinstaller can be quite large (in the 100's of MBs) depending on the script and the environment in use.  The infoworld article linked above discusses some methods for reducing the size but in general I have found it best build a new environment the only contains the modules needed for the particular script.
+
 ### Example script
 
 The Pyinstaller Example.py script in the main directory here is an extremely basic script for the sake of demonstration.  It prompts the user to select a query located in the Queries folder and will then export the results into a .csv file in the Output folder.
