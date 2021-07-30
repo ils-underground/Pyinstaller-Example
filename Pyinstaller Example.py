@@ -22,10 +22,12 @@ def listQueries():
 def runQuery(query,csvFile):
 
     # import configuration file containing our connection string
-    # app.ini looks like the following
+    # api_info.ini looks like the following
     #[db]
-    #connection_string = dbname='iii' user='PUT_USERNAME_HERE' host='sierra-db.library-name.org' password='PUT_PASSWORD_HERE' port=1032
-
+    #sql_host = [enter host for Sierra SQL server]
+    #sql_user = [enter sql username]
+    #sql_pass = [enter sql password]
+    
     config = configparser.ConfigParser()
     config.read('api_info.ini')
     
