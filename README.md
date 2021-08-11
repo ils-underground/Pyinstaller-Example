@@ -39,9 +39,21 @@ sql_pass = [enter sql password]
 ```
 cacert.pem file
 
-To find where this file is located on your computer you may run the following python script
+Your local instance may produce certificate errors if it struggles to locate this file.  Here is a solution that worked for me with other scripts:
+
+First locate the file on your system.  To find where this file is located on your computer you may run the following python script
 ```
 import certifi
 certifi.where()
 ```
 Once you've located the file, copy it to a certifi folder within the same directory
+
+Then add the following line of code to your script
+
+In your script add the following line of code:
+
+```
+os.environ['REQUESTS_CA_BUNDLE'] = "certifi/cacert.pem"
+
+```
+
